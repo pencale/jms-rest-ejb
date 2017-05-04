@@ -19,4 +19,5 @@ dependencies {
     providedCompile 'javax.jms:javax.jms-api:2.0'
     providedCompile 'javax.inject:javax.inject:1'
     providedCompile 'javax.faces:jsf-api:2.0'
+    compile 'com.sun.jersey:jersey-client:1.8'
 }
