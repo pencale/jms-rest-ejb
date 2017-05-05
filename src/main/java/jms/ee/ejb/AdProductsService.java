@@ -20,7 +20,7 @@ public class AdProductsService {
     private List<AdProduct> products = new ArrayList<>();
     public void getProductsFromMainApp(){
         Client client = Client.create();
-        WebResource webResource = client.resource("http://localhost:8080/rest/productslist");
+        WebResource webResource = client.resource("http://localhost:8080/productslist");
         ClientResponse resp = webResource.accept("application/json").get(ClientResponse.class);
         String out = resp.getEntity(String.class);
 
