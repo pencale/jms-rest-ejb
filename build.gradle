@@ -19,5 +19,9 @@ dependencies {
     providedCompile 'javax.jms:javax.jms-api:2.0'
     providedCompile 'javax.inject:javax.inject:1'
     providedCompile 'javax.faces:jsf-api:2.0'
-    compile 'com.sun.jersey:jersey-client:1.8'
+    compile 'com.sun.jersey:jersey-client:1.8',
+    "com.fasterxml.jackson.core:jackson-databind:2.5.0"
+    compile 'com.sun.jersey:jersey-json:1.19'
+    compile 'javax.faces:jsf-api:2.1'
+    compile 'org.primefaces:primefaces:6.0'
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <h:outputLabel value="Hello, world"/>
+    <div class="container">
+        <div class="displays">
+            <f:view>
+                <h:outputLabel value="#{mainBean.promoProducts}"/>
+                <ui:repeat value="#{mainBean.promoProducts}" var="product">
+                    <h:graphicImage value="#{product.imageUrl}" />
+                </ui:repeat>
+            </f:view>
+        </div>
+    </div>
+
+    <p:imageSwitch  widgetVar="switcher2" effect="none" slideshowSpeed="100" slideshowAuto="true" >
+        <ui:repeat value="#{mainBean.promoProducts}" var="product">
+            <p:graphicImage value="#{product.imageUrl}" />
+        </ui:repeat>
+    </p:imageSwitch>
+</f:view>
+
+<h:outputLink value="#{product.imageUrl}"  >
+    <h:panelGrid >
+        <h:outputText escape="false"
+                      style="font-size:22px;font-weight: bold;"
+                      value="#{product.name}"  />
+
+        <h:outputText escape="false"
+                      style="font-size:12px;font-weight: bold;"
+                      value="#{product.price}"  />
+    </h:panelGrid>
+</h:outputLink >
+</html>
