@@ -21,15 +21,20 @@
 
     <div class="container welcome-slider welcome">
 
+        <h1>LIN<span class="color">US</span></h1>
+
         <div id="w-owl" class="owl-carousel">
+
             <ui:repeat value="#{mainBean.promoProducts}" var="product">
 
                 <div class="col-md-12">
 
                     <h2>#{product.name}</h2>
-                    <img src="#{product.imageUrl}" alt="" width="400"/>
+
+                    <img src="#{product.imageUrl}" alt="" width="500"/>
+
                     <h2>Only for $#{product.price}</h2>
-                    <h1>LIN<span class="color">US</span></h1>
+
                 </div>
 
             </ui:repeat>

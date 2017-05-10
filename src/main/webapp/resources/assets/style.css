@@ -1249,7 +1249,6 @@ h2{
 .welcome{
 	text-align:right;
 	color:#fff;
-	padding-top:120px;
 	padding-bottom:110px;
 	position:relative;
 }
@@ -1257,7 +1256,6 @@ h2{
 .welcome-slider.welcome {
 	text-align:center;
 	padding-bottom:80px;
-	padding-top:100px;
 }
 
 .static .welcome{
