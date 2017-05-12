@@ -23,5 +23,10 @@ dependencies {
     "com.fasterxml.jackson.core:jackson-databind:2.5.0"
     compile 'com.sun.jersey:jersey-json:1.19'
     compile 'javax.faces:jsf-api:2.1'
-    compile 'org.primefaces:primefaces:6.0'
+//    compile 'org.primefaces:primefaces:6.0'
+//    compile 'org.atmosphere:atmosphere-runtime:2.4.8'
+//    compile 'org.richfaces:richfaces-bom:4.1.0.Final'
+    compile 'javax.enterprise:cdi-api:2.0-PFD2'
+    compile 'org.richfaces:richfaces-a4j:4.5.17.Final'
+    runtime 'org.richfaces:richfaces-push-depchain:4.5.17.Final'
 }

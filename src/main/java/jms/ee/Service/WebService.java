@@ -1,11 +1,11 @@
-package jms.ee.ejb.Service;
+package jms.ee.Service;
 
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
-import jms.ee.ejb.AdProduct;
+import jms.ee.AdProduct;
 import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 
 import javax.ejb.Stateless;
@@ -28,8 +28,6 @@ public class WebService {
         ClientResponse resp = webResource.accept("application/json").get(ClientResponse.class);
         AdProduct[] productsList = resp.getEntity(AdProduct[].class);
         System.out.println(productsList);
-        int respStatus = resp.getStatus();
-
         updatePromoProductsList(productsList);
     }
 

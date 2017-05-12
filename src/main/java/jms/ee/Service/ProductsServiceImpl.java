@@ -1,9 +1,12 @@
-package jms.ee.ejb.Service;
+package jms.ee.Service;
 
 
-import jms.ee.ejb.AdProduct;
+import jms.ee.AdProduct;
+import org.richfaces.cdi.push.Push;
 
 import javax.ejb.Stateless;
+import javax.enterprise.event.Event;
+import javax.inject.Inject;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,16 +15,23 @@ import java.util.List;
  */
 @Stateless(name = "productService")
 public class ProductsServiceImpl implements ProductsService {
+    private static final String DO_UPDATE = "doUpdate";
+
+    @Inject
+    private PushService pushService;
+
     private static List<AdProduct> products;
 
     @Override
     public void updateProductsList(AdProduct[] productsList) {
         products = Arrays.asList(productsList);
-        products.forEach(System.out::println);
+        pushService.setMessage(DO_UPDATE);
+        pushService.sendMessage();
     }
 
     @Override
     public List<AdProduct> getAll() {
         return products;
     }
+
 }

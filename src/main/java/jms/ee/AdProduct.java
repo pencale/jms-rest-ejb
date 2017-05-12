@@ -1,4 +1,4 @@
-package jms.ee.ejb;
+package jms.ee;
 
 /**
  * Created by apenchukov on 5/4/2017.

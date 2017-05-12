@@ -1,6 +1,6 @@
-package jms.ee.ejb;
+package jms.ee;
 
-import jms.ee.ejb.Service.WebService;
+import jms.ee.Service.WebService;
 
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
@@ -22,8 +22,6 @@ public class Listener implements MessageListener {
     @Override
     public void onMessage(Message message) {
         try {
-            System.out.println(getClass().getSimpleName() + " >>>>>>>> " + message.getBody(String.class));
-
             if(message.getBody(String.class).equals(DO_UPDATE)){
             webService.getProductsFromMainApp();
             }

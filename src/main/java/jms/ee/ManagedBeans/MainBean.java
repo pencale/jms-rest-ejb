@@ -1,8 +1,8 @@
-package jms.ee.ejb.ManagedBeans;
+package jms.ee.ManagedBeans;
 
-import jms.ee.ejb.AdProduct;
-import jms.ee.ejb.Service.ProductsService;
-import jms.ee.ejb.Service.WebService;
+import jms.ee.AdProduct;
+import jms.ee.Service.ProductsService;
+import jms.ee.Service.WebService;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ApplicationScoped;

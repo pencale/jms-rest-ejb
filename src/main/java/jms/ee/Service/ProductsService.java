@@ -1,6 +1,6 @@
-package jms.ee.ejb.Service;
+package jms.ee.Service;
 
-import jms.ee.ejb.AdProduct;
+import jms.ee.AdProduct;
 
 import java.util.List;
 
